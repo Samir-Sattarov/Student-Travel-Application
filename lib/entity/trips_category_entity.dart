@@ -5,7 +5,6 @@ class TripsCategoryEntity {
   final Color color;
 
 
-
   TripsCategoryEntity({
     required this.color,
     required this.image,
