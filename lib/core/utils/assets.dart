@@ -12,5 +12,7 @@ class Assets {
   static String tWilson = "assets/svg/jenny_wilson.svg";
   static String tMountainIcon = "assets/svg/mountain_svg.svg";
   static String tMuseumIcon = "assets/svg/museum_svg.svg";
-  static String tNomadsAva = "assets/svg/nomads_avatar.svg";
+  static String tNomadsAva = "assets/images/nomads_ava.png";
+  static String tNomadsAvaThree = "assets/images/nomads_ava_three.png";
+  static String tNomadsAvaFour = "assets/images/nomads_ava_four.png";
 }
