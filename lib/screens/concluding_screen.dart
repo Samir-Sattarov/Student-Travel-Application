@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyConcludingScreen> {
                             fontSize: 20.sp,
                             fontWeight: FontWeight.w600
                           )
-                        ),)
+                       ),)
                       ],
                     ),
                   ),
