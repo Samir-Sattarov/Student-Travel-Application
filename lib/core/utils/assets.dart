@@ -1,4 +1,9 @@
 class Assets {
+
+  static String TAva = 'assets/images/Avatarka.png';
+  static String tStanding = 'assets/images/Standing.png';
+  static String tTravel = 'assets/images/city_travel.png';
+  static String tPonchik = 'assets/images/magic_donut.png';
   static String tAvatarLouSmith = "assets/images/avatar_lou_smith.png";
   static String tDiscoveryAvaNomads = "assets/images/discovery_avatar_nomads.png";
   static String tDiscoveryAvaNomadsTwo = "assets/images/discovery_avatar_nomads_two.png";
@@ -16,3 +21,4 @@ class Assets {
   static String tNomadsAvaThree = "assets/images/nomads_ava_three.png";
   static String tNomadsAvaFour = "assets/images/nomads_ava_four.png";
 }
+
