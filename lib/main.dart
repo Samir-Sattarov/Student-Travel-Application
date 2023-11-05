@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:student_travel_application/screens/discovery_screen_three.dart';
+import 'package:student_travel_application/screens/discovery_screen_two.dart';
+import 'package:student_travel_application/screens/favorites_section_first_screen.dart';
 import 'package:student_travel_application/screens/login_first_screen.dart';
 
 void main() async {
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: LoginFirstScreen(),
+      child: const LoginFirstScreen(),
     );
   }
 }
