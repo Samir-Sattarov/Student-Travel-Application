@@ -5,16 +5,7 @@ import 'package:student_travel_application/core/utils/assets.dart';
 
 import 'login_second_screen.dart';
 
-void main() async {
 
-
-  WidgetsFlutterBinding.ensureInitialized();
-
-
-  await ScreenUtil.ensureScreenSize();
-
-  runApp(const MyApp());
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -107,10 +98,44 @@ class _MyHomePageState extends State<MyLoginfirstscreen> {
                                   color: Color(0xff656F77)
                               )
                           )),
+                          SizedBox(height: 50,),
+                          Container(
+                            width: 60.w,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 16.w,
+                                  height: 6.h,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(100),
+                                    color: Color(0xffFFAC4B)
+                                  ),
+                                ),
+                                Container(
+                                  width: 6.w,
+                                  height: 6.h,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(100),
+                                    color: Color(0xffACB8C2)
+                                  ),
+                                ),
+                                Container(
+                                  width: 6.w,
+                                  height: 6.h,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      color: Color(0xffACB8C2)
+                                  ),
+                                ),
+
+                              ],
+                            ),
+                          ),
 
                           Container(
                             margin: EdgeInsets.only(
-                              top: 120
+                              top: 20
                             ),
 
                             width: 343.w,

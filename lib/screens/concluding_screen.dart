@@ -5,16 +5,7 @@ import 'package:student_travel_application/core/utils/assets.dart';
 
 import 'login_second_screen.dart';
 
-void main() async {
 
-
-  WidgetsFlutterBinding.ensureInitialized();
-
-
-  await ScreenUtil.ensureScreenSize();
-
-  runApp(const MyApp());
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -68,7 +59,7 @@ class _MyHomePageState extends State<MyConcludingScreen> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.blue,
+          color: Color(0xffCFFFF6),
 
           child: Column(
             children: [
@@ -124,44 +115,7 @@ class _MyHomePageState extends State<MyConcludingScreen> {
                   ),
                 ),
               )
-              // Container(
-              //   decoration: BoxDecoration(
-              //     borderRadius: BorderRadius.circular(4).r,
-              //     color: Color(0xff191D21),
-              //   ),
-              //   child: InkWell(
-              //     onTap: () {
-              //       Navigator.push(context, MaterialPageRoute(builder: (context) => MyConcludingScreen()));
-              //
-              //     },
-              //     child: Center(
-              //       child: Ink(
-              //         height: 57.h,
-              //         width: 327.w,
-              //         padding: EdgeInsets.only(
-              //           left: 135,
-              //
-              //         ),
-              //
-              //         child: Row(
-              //           children: [
-              //             Text(
-              //               'Log in', style: GoogleFonts.nunito(
-              //                 textStyle: TextStyle(
-              //                     fontSize: 16.sp,
-              //                     fontWeight: FontWeight.w600,
-              //                     color: Color(0xffFFFFFF)
-              //                 )
-              //             ),
-              //             ),
-              //             SizedBox(width: 20.w,),
-              //             Icon(Icons.arrow_right_alt_outlined, color: Colors.white, )
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+
             ],
           ),
         ),

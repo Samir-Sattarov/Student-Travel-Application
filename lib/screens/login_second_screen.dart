@@ -5,16 +5,6 @@ import 'package:student_travel_application/core/utils/assets.dart';
 import 'package:student_travel_application/screens/signing_acc.dart';
 
 
-void main() async {
-
-
-  WidgetsFlutterBinding.ensureInitialized();
-
-
-  await ScreenUtil.ensureScreenSize();
-
-  runApp(const MyApp());
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -189,7 +179,7 @@ class _MyHomePageState extends State<MyLoginsecondscreen> {
 
 
                       Container(
-                        padding: EdgeInsets.only(top:65),
+                        padding: EdgeInsets.only(top:35),
                         color: Color(0xffCBE3FF),
                         child: Column(
                           children: [
