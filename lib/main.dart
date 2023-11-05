@@ -1,17 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:student_travel_application/screens/favorites_section_first_screen.dart';
-import 'package:student_travel_application/screens/favorites_section_second_screen.dart';
-import 'package:student_travel_application/screens/favorites_section_third_screen.dart';
-import 'package:student_travel_application/screens/camping_in_la_screen.dart';
-import 'package:student_travel_application/screens/city_of_london_screen.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:student_travel_application/screens/login_first_screen.dart';
-import 'package:student_travel_application/screens/discovery_screen_three.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
 
   await ScreenUtil.ensureScreenSize();
@@ -20,20 +11,20 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Traver app',
           theme: ThemeData(),
           home: child,
         );
       },
-      child: const MyHomePage(),
+      child: LoginFirstScreen(),
     );
   }
 }
-       
