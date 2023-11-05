@@ -1,5 +1,14 @@
 class Assets {
-
+  static const String tCampingImage = "assets/images/camping_image.png";
+  static const String tCityOfLondon = "assets/images/city_of_london_image.png";
+  static const String tAvatarGirlIcon = "assets/images/avatar_girl_icon.png";
+  static const String tLocationIcon = "assets/svg/location_icon.svg";
+  static const String tLikeIcon = "assets/svg/like_icon.svg";
+  static const String tSendIcon = "assets/svg/send_icon.svg";
+  static const String tMoreVerticalIcon = "assets/svg/more_vertical_icon.svg";
+  static const String tMuseumIcon = "assets/svg/museum_icon.svg";
+  static const String tPhotoIcon = "assets/svg/photo_icon.svg";
+  static const String tFaceIcon = "assets/svg/face_icon.svg";
   static String TAva = 'assets/images/Avatarka.png';
   static String tStanding = 'assets/images/Standing.png';
   static String tTravel = 'assets/images/city_travel.png';
@@ -21,4 +30,6 @@ class Assets {
   static String tNomadsAvaThree = "assets/images/nomads_ava_three.png";
   static String tNomadsAvaFour = "assets/images/nomads_ava_four.png";
 }
+
+
 
