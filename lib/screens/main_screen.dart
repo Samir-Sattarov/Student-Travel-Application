@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:student_travel_application/widgets/bottom_bar_widget.dart';
 
 import 'discovery_screen_one.dart';
 import 'discovery_screen_three.dart';
@@ -20,6 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     const DiscoveryScreenThree()
   ];
   int currentScreen = 0;
+  bool isSelect = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,90 +40,33 @@ class _MainScreenState extends State<MainScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    currentScreen = 0;
-                  });
-                },
-                child: SizedBox(
-                  height: 58.h,
-                  width: 64.w,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 24.h,
-                        width: 24.w,
-                        child: const Icon(Icons.location_on),
-                      ),
-                      Text(
-                        "Trips",
-                        style: GoogleFonts.rubik(
-                            textStyle: TextStyle(
-                                fontSize: 14.sp, fontWeight: FontWeight.w400)),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    currentScreen = 1;
-                  });
-                },
-                child: SizedBox(
-                  height: 58.h,
-                  width: 64.w,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 24.h,
-                        width: 24.w,
-                        child: const Icon(Icons.heart_broken),
-                      ),
-                      Text(
-                        "Profile",
-                        style: GoogleFonts.rubik(
-                            textStyle: TextStyle(
-                                fontSize: 14.sp, fontWeight: FontWeight.w400)),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    currentScreen = 2;
-                  });
-                },
-                child: SizedBox(
-                  height: 58.h,
-                  width: 64.w,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 24.h,
-                        width: 24.w,
-                        child: const Icon(Icons.settings),
-                      ),
-                      Text(
-                        "Trips",
-                        style: GoogleFonts.rubik(
-                            textStyle: TextStyle(
-                                fontSize: 14.sp, fontWeight: FontWeight.w400)),
-                      )
-                    ],
-                  ),
-                ),
-              )
+              BottomBarWidget(
+                  isActive: currentScreen == 0 ? true : false,
+                  onTap: () {
+                    setState(() {
+                      currentScreen = 0;
+                    });
+                  },
+                  icon: Icons.location_on,
+                  title: "Trips"),
+              BottomBarWidget(
+                  isActive: currentScreen == 1 ? true : false,
+                  onTap: () {
+                    setState(() {
+                      currentScreen = 1;
+                    });
+                  },
+                  icon: Icons.favorite,
+                  title: "Profile"),
+              BottomBarWidget(
+                  isActive: currentScreen == 2 ? true : false,
+                  onTap: () {
+                    setState(() {
+                      currentScreen = 2;
+                    });
+                  },
+                  icon: Icons.settings,
+                  title: "Settings"),
             ],
           ),
         ),
