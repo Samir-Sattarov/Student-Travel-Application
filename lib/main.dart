@@ -4,6 +4,7 @@ import 'package:student_travel_application/screens/discovery_screen_three.dart';
 import 'package:student_travel_application/screens/discovery_screen_two.dart';
 import 'package:student_travel_application/screens/favorites_section_first_screen.dart';
 import 'package:student_travel_application/screens/login_first_screen.dart';
+import 'package:student_travel_application/screens/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const LoginFirstScreen(),
+      child: const MainScreen(),
     );
   }
 }

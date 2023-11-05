@@ -70,71 +70,73 @@ class _DiscoveryScreenTwoScreenState extends State<DiscoveryScreenTwoScreen> {
       ),
     ];
     return Scaffold(
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 60.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  "Find Your Perfect\nRommie",
-                  style: GoogleFonts.nunito(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 32.sp,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 60.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "Find Your Perfect\nRommie",
+                    style: GoogleFonts.nunito(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 32.sp,
+                    ),
                   ),
+                  SizedBox(
+                      height: 56.h,
+                      width: 24.w,
+                      child: const Icon(
+                        Icons.more_vert_rounded,
+                        color: Color(0xff656F77),
+                      )),
+                ],
+              ),
+              SizedBox(height: 16.h),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ...List.generate(
+                        listEntityRommie.length,
+                        (index) => Padding(
+                              padding: EdgeInsets.only(left: 16.w),
+                              child: RommieCardWidget(
+                                  entity: listEntityRommie[index]),
+                            ))
+                  ],
                 ),
-                SizedBox(
-                    height: 56.h,
-                    width: 24.w,
-                    child: const Icon(
-                      Icons.more_vert_rounded,
-                      color: Color(0xff656F77),
-                    )),
-              ],
-            ),
-            SizedBox(height: 16.h),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ...List.generate(
-                      listEntityRommie.length,
-                      (index) => Padding(
-                            padding: EdgeInsets.only(left: 16.w),
-                            child: RommieCardWidget(
-                                entity: listEntityRommie[index]),
-                          ))
-                ],
               ),
-            ),
-            SizedBox(height: 24.h,),
-            Container(
-              padding: EdgeInsets.only(left: 20.w),
-              child: Text("Home Preference",style: GoogleFonts.nunito(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),),
-            ),
-            SizedBox(height: 24.h,),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ...List.generate(
-                      listEntityPreference.length,
-                          (index) => Padding(
-                        padding: EdgeInsets.only(left: 16.w),
-                        child: HomePreferenceWidget(
-                            entity: listEntityPreference[index]),
-                      ))
-                ],
+              SizedBox(height: 24.h,),
+              Container(
+                padding: EdgeInsets.only(left: 20.w),
+                child: Text("Home Preference",style: GoogleFonts.nunito(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),),
               ),
-            ),
-          ],
+              SizedBox(height: 24.h,),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ...List.generate(
+                        listEntityPreference.length,
+                            (index) => Padding(
+                          padding: EdgeInsets.only(left: 16.w),
+                          child: HomePreferenceWidget(
+                              entity: listEntityPreference[index]),
+                        ))
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
