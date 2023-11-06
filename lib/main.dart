@@ -7,9 +7,12 @@ import 'package:student_travel_application/screens/login_first_screen.dart';
 import 'package:student_travel_application/screens/main_screen.dart';
 
 void main() async {
+
+
   WidgetsFlutterBinding.ensureInitialized();
 
   await ScreenUtil.ensureScreenSize();
+
   runApp(const MyApp());
 }
 
