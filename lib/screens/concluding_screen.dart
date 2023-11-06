@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:student_travel_application/core/utils/assets.dart';
-
-import 'discovery_screen_one.dart';
+import 'package:student_travel_application/screens/main_screen.dart';
 
 class MyConcludingScreen extends StatefulWidget {
   const MyConcludingScreen({super.key});
@@ -30,8 +29,8 @@ class _MyHomePageState extends State<MyConcludingScreen> {
             Text(
               'Find your Roomie',
               style: GoogleFonts.nunito(
-                  textStyle: TextStyle(
-                      fontSize: 24.sp, fontWeight: FontWeight.w800)),
+                  textStyle:
+                      TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w800)),
             ),
             SizedBox(
               height: 16.h,
@@ -65,8 +64,7 @@ class _MyHomePageState extends State<MyConcludingScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const DiscoveryScreenOneScreen(),
+                        builder: (context) => const MainScreen(),
                       ));
                 },
                 child: Ink(
