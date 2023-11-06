@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:student_travel_application/core/utils/assets.dart';
+import 'package:student_travel_application/screens/favorites_section_first_screen.dart';
 import '../entity/others_user_entity.dart';
 import '../entity/rommies_card_entity.dart';
 import '../widgets/other_user_card_widget.dart';
@@ -30,14 +31,11 @@ class _DiscoveryScreenThreeState extends State<DiscoveryScreenThree> {
         country: 'Åland Islands'),
   ];
   List<OtherUserEntity> lisUsersEntity = [
-    OtherUserEntity(
-        avatar: Assets.tAvatarLouSmith, name: "Gary", cost: "#500"),
+    OtherUserEntity(avatar: Assets.tAvatarLouSmith, name: "Gary", cost: "#500"),
     OtherUserEntity(
         avatar: Assets.tNomadsAvaThree, name: "Sassa", cost: "#500"),
-    OtherUserEntity(
-        avatar: Assets.tNomadsAvaFour, name: "Jessi", cost: "#500"),
-    OtherUserEntity(
-        avatar: Assets.tNomadsAva, name: "Simon", cost: "#500"),
+    OtherUserEntity(avatar: Assets.tNomadsAvaFour, name: "Jessi", cost: "#500"),
+    OtherUserEntity(avatar: Assets.tNomadsAva, name: "Simon", cost: "#500"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -63,13 +61,23 @@ class _DiscoveryScreenThreeState extends State<DiscoveryScreenThree> {
                 ),
                 Row(
                   children: [
-                   const Icon(Icons.search_rounded, color: Color(0xff656F77)),
+                    const Icon(Icons.search_rounded, color: Color(0xff656F77)),
                     SizedBox(
                       width: 16.w,
                     ),
-                    const Icon(
-                      Icons.star,
-                      color: Color(0xff656F77),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const FavoritesSectionFirstScreen(),
+                            ));
+                      },
+                      child: const Icon(
+                        Icons.star,
+                        color: Color(0xff656F77),
+                      ),
                     )
                   ],
                 )
@@ -101,7 +109,9 @@ class _DiscoveryScreenThreeState extends State<DiscoveryScreenThree> {
                 ),
               ),
             ]),
-            SizedBox(height: 40.h,),
+            SizedBox(
+              height: 40.h,
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(

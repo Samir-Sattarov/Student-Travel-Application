@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:student_travel_application/core/utils/assets.dart';
+import 'package:student_travel_application/screens/favorites_section_second_screen.dart';
 import 'package:student_travel_application/widgets/favorites_section_first_screen_adv.dart';
 import 'package:student_travel_application/widgets/favorites_section_first_screen_cells_widget.dart';
 import 'package:student_travel_application/widgets/favorites_top_custom_icon_button.dart';
@@ -70,6 +71,7 @@ class _FavoritesSectionFirstScreenState
             Text(
               'Favorites',
               style: GoogleFonts.nunito(
+                color: Colors.black,
                 fontSize: 32,
                 fontWeight: FontWeight.w800,
                 letterSpacing: -1,
@@ -78,7 +80,14 @@ class _FavoritesSectionFirstScreenState
             ),
             const Spacer(),
             FavoritesTopCustomIconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const FavoritesSectionSecondScreen(),
+                    ));
+              },
               icon: Icons.search,
               iconColor: const Color(0xff656F77),
             ),
@@ -122,8 +131,5 @@ class _FavoritesSectionFirstScreenState
         ),
       ),
     );
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(body: Placeholder());
   }
 }

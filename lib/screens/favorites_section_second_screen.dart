@@ -5,6 +5,10 @@ import 'package:student_travel_application/core/utils/assets.dart';
 import 'package:student_travel_application/entity/favorites_section_second_screen_list_card_entity.dart';
 import 'package:student_travel_application/widgets/favorites_section_second_screen_list_card_widget.dart';
 
+import 'camping_in_la_screen.dart';
+import 'city_of_london_screen.dart';
+import 'favorites_section_third_screen.dart';
+
 class FavoritesSectionSecondScreen extends StatefulWidget {
   static route() =>
       MaterialPageRoute(builder: (_) => const FavoritesSectionSecondScreen());
@@ -26,7 +30,7 @@ class _FavoritesSectionSecondScreenState
       price: 100,
     ),
     FavoritesSectionSecondScreenListCardEntity(
-      title: 'Madrid',
+      title: 'London',
       text: 'Discover new places and find new adventures.',
       image: Assets.FavoritesSectionSecondScreenListCardImage,
       imageBg: Colors.red,
@@ -110,9 +114,19 @@ class _FavoritesSectionSecondScreenState
                     borderRadius: BorderRadius.circular(4),
                     borderSide: const BorderSide(color: Colors.red),
                   ),
-                  suffixIcon: const Icon(
-                    Icons.search,
-                    color: Color(0xff656F77),
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const FavoritesSectionThirdScreen(),
+                          ));
+                    },
+                    child: const Icon(
+                      Icons.search,
+                      color: Color(0xff656F77),
+                    ),
                   ),
                 ),
               ),
@@ -138,7 +152,22 @@ class _FavoritesSectionSecondScreenState
                       const SizedBox(height: 16),
                       FavoritesSectionSecondScreenListCardWidget(
                         entity: listCards[index],
-                        onPressed: () {},
+                        onPressed: () {
+                          listCards[index].title == 'L.A.'
+                              ? Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CampingInLaScreen()))
+                              : null;
+                          listCards[index].title == 'London'
+                              ? Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CityOfLondonScreen()))
+                              : null;
+                        },
                       )
                     ],
                   );

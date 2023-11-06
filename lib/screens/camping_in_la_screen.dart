@@ -47,7 +47,9 @@ class _CampingInLaScreenState extends State<CampingInLaScreen> {
                       children: [
                         SizedBox(height: 16.h),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
                             icon: const Icon(Icons.arrow_back_ios_rounded)),
                         SizedBox(height: 16.h),
                         SizedBox(
