@@ -110,7 +110,7 @@ class _DiscoveryScreenThreeState extends State<DiscoveryScreenThree> {
               ),
             ]),
             SizedBox(
-              height: 40.h,
+              height: 10.h,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,

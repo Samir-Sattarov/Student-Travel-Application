@@ -18,8 +18,8 @@ class TripsEntityWidgets extends StatelessWidget {
         )
       ]),
       child: Container(
-        width: 343.w,
-        height: 277.5.h,
+        // width: 343.w,
+        // height: 277.5.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: const Color(0xffCBE3FF),
