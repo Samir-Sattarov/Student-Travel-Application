@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:student_travel_application/core/utils/assets.dart';
 
-import 'package:student_travel_application/entity/favorites_section_second_screen_list_card_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_list_card_entity.dart';
 import 'package:student_travel_application/widgets/favorites_section_second_screen_list_card_widget.dart';
 
 import 'camping_in_la_screen.dart';

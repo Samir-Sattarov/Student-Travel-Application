@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../entity/home_preference_entity.dart';
+import '../entity/category_entity.dart';
 
 class HomePreferenceWidget extends StatelessWidget {
-  final HomePreferenceEntity entity;
+  final CategoryEntity entity;
   const HomePreferenceWidget({Key? key, required this.entity})
       : super(key: key);
 

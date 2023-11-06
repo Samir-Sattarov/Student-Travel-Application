@@ -76,54 +76,18 @@ class _MyHomePageState extends State<MyConcludingScreen> {
                       Text(
                         'Let\'s go',
                         style: GoogleFonts.nunito(
-                            textStyle: TextStyle(
-                                color: const Color(0xffFFFFFF),
-                                fontSize: 20.sp,
-                                fontWeight: FontWeight.w600)),
+                          textStyle: TextStyle(
+                            color: const Color(0xffFFFFFF),
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       )
                     ],
                   ),
                 ),
               ),
             )
-            // Container(
-            //   decoration: BoxDecoration(
-            //     borderRadius: BorderRadius.circular(4).r,
-            //     color: Color(0xff191D21),
-            //   ),
-            //   child: InkWell(
-            //     onTap: () {
-            //       Navigator.push(context, MaterialPageRoute(builder: (context) => MyConcludingScreen()));
-            //
-            //     },
-            //     child: Center(
-            //       child: Ink(
-            //         height: 57.h,
-            //         width: 327.w,
-            //         padding: EdgeInsets.only(
-            //           left: 135,
-            //
-            //         ),
-            //
-            //         child: Row(
-            //           children: [
-            //             Text(
-            //               'Log in', style: GoogleFonts.nunito(
-            //                 textStyle: TextStyle(
-            //                     fontSize: 16.sp,
-            //                     fontWeight: FontWeight.w600,
-            //                     color: Color(0xffFFFFFF)
-            //                 )
-            //             ),
-            //             ),
-            //             SizedBox(width: 20.w,),
-            //             Icon(Icons.arrow_right_alt_outlined, color: Colors.white, )
-            //           ],
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BottomBarWidget extends StatelessWidget {
+class BottomNavigationBarItemWidget extends StatelessWidget {
   final Function() onTap;
   final IconData icon;
   final String title;
   final bool isActive;
-  const BottomBarWidget(
+  const BottomNavigationBarItemWidget(
       {Key? key, required this.onTap, required this.icon, required this.title, required this.isActive})
       : super(key: key);
 

@@ -30,9 +30,14 @@ class Assets {
   static String tNomadsAva = "assets/images/nomads_ava.png";
   static String tNomadsAvaThree = "assets/images/nomads_ava_three.png";
   static String tNomadsAvaFour = "assets/images/nomads_ava_four.png";
-  static const String FavoritesSectionSecondScreenAvatar = "assets/images/FavoritesSectionSecondScreenAvatar.png";
-  static const String FavoritesSectionFirstScreenAdvImage = "assets/images/FavoritesSectionFirstScreenAdvImage.png";
-  static const String FavoritesSectionSecondScreenListCardImage = "assets/images/FavoritesSectionSecondScreenListCardImage.png";
-  static const String FavoritesSectionThirdScreenRecommendedCardPhoto = "assets/images/FavoritesSectionThirdScreenRecommendedCardPhoto.png";
-  static const String FavoritesSectionThirdScreenPopularCardPhoto = "assets/images/FavoritesSectionThirdScreenPopularCardPhoto.png";
+  static const String FavoritesSectionSecondScreenAvatar =
+      "assets/images/FavoritesSectionSecondScreenAvatar.png";
+  static const String FavoritesSectionFirstScreenAdvImage =
+      "assets/images/FavoritesSectionFirstScreenAdvImage.png";
+  static const String FavoritesSectionSecondScreenListCardImage =
+      "assets/images/FavoritesSectionSecondScreenListCardImage.png";
+  static const String FavoritesSectionThirdScreenRecommendedCardPhoto =
+      "assets/images/FavoritesSectionThirdScreenRecommendedCardPhoto.png";
+  static const String FavoritesSectionThirdScreenPopularCardPhoto =
+      "assets/images/FavoritesSectionThirdScreenPopularCardPhoto.png";
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:student_travel_application/entity/favorites_section_third_screen_popular_card_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_popular_card_entity.dart';
 
 class FavoritesSectionThirdScreenPopularCardWidget extends StatelessWidget {
   final FavoritesSectionThirdScreenPopularCardEntity entity;

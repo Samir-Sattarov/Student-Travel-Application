@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../entity/users_rommie_card_entity.dart';
 
 class RommieCardWidget extends StatelessWidget {
-  final RommieCardEntity entity;
+  final UsersRommieCardEntity entity;
   const RommieCardWidget({Key? key, required this.entity}) : super(key: key);
 
   @override

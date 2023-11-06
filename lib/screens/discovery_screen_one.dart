@@ -70,87 +70,75 @@ class _DiscoveryScreenOneScreenState extends State<DiscoveryScreenOneScreen> {
         body: SafeArea(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    width: 295.w,
-                    height: 40.h,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Search",
-                        contentPadding: EdgeInsets.zero,
-                        prefixIcon: const Icon(Icons.search_rounded,
-                            color: Color(0xff656F77)),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(4).r,
-                          borderSide: BorderSide(
-                            width: 1.w,
-                            color: const Color(0xffACB8C2),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 295.w,
+                      height: 40.h,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: "Search",
+                          contentPadding: EdgeInsets.zero,
+                          prefixIcon: const Icon(Icons.search_rounded,
+                              color: Color(0xff656F77)),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(4).r,
+                            borderSide: BorderSide(
+                              width: 1.w,
+                              color: const Color(0xffACB8C2),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 32.w,
-                    height: 32.h,
-                    child: Image.asset(Assets.tNomadsAva),
-                  )
-                ],
+                    SizedBox(
+                      width: 32.w,
+                      height: 32.h,
+                      child: Image.asset(Assets.tNomadsAva),
+                    )
+                  ],
+                ),
               ),
+              SizedBox(height: 16.h),
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 16),
+                child: Text(
+                  "Upcoming meetups",
+                  style: GoogleFonts.nunito(
+                      fontSize: 32.sp, fontWeight: FontWeight.w800),
+                ),
+              ),
+              SizedBox(height: 16.h),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ...List.generate(
+                      listEntity.length,
+                      (index) => Padding(
+                          padding: EdgeInsets.only(left: 16.w),
+                          child: TripsCategoryWidgets(
+                            entity: listEntity[index],
+                            onTap: () {},
+                          )),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 16.h),
               Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 16.h,
-                      ),
-                      Row(children: [
-                        Container(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: Text(
-                            "Upcoming meetups",
-                            style: GoogleFonts.nunito(
-                                fontSize: 32.sp, fontWeight: FontWeight.w800),
-                          ),
-                        ),
-                      ]),
-                      SizedBox(
-                        height: 16.h,
-                      ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            ...List.generate(
-                              listEntity.length,
-                              (index) => Padding(
-                                  padding: EdgeInsets.only(left: 16.w),
-                                  child: TripsCategoryWidgets(
-                                      entity: listEntity[index], onTap: () {
-
-                                  },)),
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 16.h,
-                      ),
-                      Column(
-                        children: [
-                          ...List.generate(
-                              listEntityTrip.length,
-                              (index) => Padding(
-                                    padding: const EdgeInsets.only(bottom: 16),
-                                    child: TripsEntityWidgets(
-                                        entity: listEntityTrip[index]),
-                                  ))
-                        ],
-                      ),
-                    ],
-                  ),
+                child: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: TripsEntityWidgets(entity: listEntityTrip[index]),
+                    );
+                  },
+                  itemCount: listEntityTrip.length,
                 ),
               ),
             ],

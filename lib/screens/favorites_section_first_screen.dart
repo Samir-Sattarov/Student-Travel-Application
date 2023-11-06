@@ -5,8 +5,8 @@ import 'package:student_travel_application/screens/favorites_section_second_scre
 import 'package:student_travel_application/widgets/favorites_section_first_screen_adv.dart';
 import 'package:student_travel_application/widgets/favorites_section_first_screen_cells_widget.dart';
 import 'package:student_travel_application/widgets/favorites_top_custom_icon_button.dart';
-import 'package:student_travel_application/entity/favorites_section_first_screen_adv_entity.dart';
-import 'package:student_travel_application/entity/favorites_section_first_screen_cells_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_adv_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_cells_entity.dart';
 
 class FavoritesSectionFirstScreen extends StatefulWidget {
   static route() =>
@@ -107,7 +107,7 @@ class _FavoritesSectionFirstScreenState
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              FavoritesSectionFirstScreenAdv(entity: advEntity),
+              AdsCardWidget(entity: advEntity),
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),

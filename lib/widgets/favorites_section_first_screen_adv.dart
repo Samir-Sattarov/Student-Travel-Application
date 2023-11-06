@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:student_travel_application/entity/favorites_section_first_screen_adv_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_adv_entity.dart';
 
-class FavoritesSectionFirstScreenAdv extends StatelessWidget {
+class AdsCardWidget extends StatelessWidget {
   final FavoritesSectionFirstScreenAdvEntity entity;
 
-  const FavoritesSectionFirstScreenAdv({super.key, required this.entity});
+  const AdsCardWidget({super.key, required this.entity});
 
   @override
   Widget build(BuildContext context) {

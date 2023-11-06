@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:student_travel_application/entity/favorites_section_third_screen_recommended_card_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_recommended_card_entity.dart';
 
 class FavoritesSectionThirdScreenRecommendedCardWidget extends StatelessWidget {
   final FavoritesSectionThirdScreenRecommendedCardEntity entity;
@@ -25,7 +26,7 @@ class FavoritesSectionThirdScreenRecommendedCardWidget extends StatelessWidget {
           alignment: Alignment.bottomCenter,
         ),
       ),
-      height: 396,
+      height: 396.h,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

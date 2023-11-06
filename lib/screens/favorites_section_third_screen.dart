@@ -4,8 +4,8 @@ import 'package:student_travel_application/core/utils/assets.dart';
 import 'package:student_travel_application/widgets/favorites_section_third_screen_recommended_card_widget.dart';
 import 'package:student_travel_application/widgets/favorites_section_third_screen_popular_card_widget.dart';
 import 'package:student_travel_application/widgets/favorites_top_custom_icon_button.dart';
-import 'package:student_travel_application/entity/favorites_section_third_screen_recommended_card_entity.dart';
-import 'package:student_travel_application/entity/favorites_section_third_screen_popular_card_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_recommended_card_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_popular_card_entity.dart';
 
 class FavoritesSectionThirdScreen extends StatefulWidget {
   static route() =>

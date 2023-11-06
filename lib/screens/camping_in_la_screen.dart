@@ -34,12 +34,11 @@ class _CampingInLaScreenState extends State<CampingInLaScreen> {
             children: [
               Container(
                 height: 692.h,
-                width: 409.w,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         bottomLeft: const Radius.circular(20).r,
-                        bottomRight: const Radius.circular(20).r)),
+                        bottomRight: const Radius.circular(20).r,),),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16, bottom: 16).r,
                   child: Column(

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:student_travel_application/core/utils/assets.dart';
 import 'package:student_travel_application/screens/favorites_section_first_screen.dart';
 import '../entity/others_user_entity.dart';
-import '../entity/rommies_card_entity.dart';
+import '../entity/rommies_entity.dart';
 import '../widgets/other_user_card_widget.dart';
 import '../widgets/rommies_card_data_widget.dart';
 

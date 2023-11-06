@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class HomePreferenceEntity {
+class CategoryEntity {
   final String image;
   final String place;
   final Color color;
 
-  HomePreferenceEntity (
+  CategoryEntity (
       {required this.image,
         required this.place,
         required this.color

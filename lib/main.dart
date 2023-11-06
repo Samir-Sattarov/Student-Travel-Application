@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:student_travel_application/screens/login_first_screen.dart';
+import 'package:student_travel_application/screens/on_boarding_one_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const LoginFirstScreen(),
+      child: const OnBoardingScreen(),
     );
   }
 }

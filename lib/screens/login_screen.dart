@@ -25,17 +25,21 @@ class _MyHomePageState extends State<SigningAccount> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                  width: 375.w,
-                  height: 346.h,
-                  child: Center(child: Image.asset(Assets.tTravel))),
-              SizedBox(
-                height: 27.h,
+                width: 375.w,
+                height: 346.h,
+                child: Center(
+                  child: Image.asset(Assets.tTravel),
+                ),
               ),
+              SizedBox(height: 27.h),
               Text(
                 'Login',
                 style: GoogleFonts.nunito(
-                    textStyle: const TextStyle(
-                        fontWeight: FontWeight.w800, fontSize: 32)),
+                  textStyle: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 32.sp,
+                  ),
+                ),
               ),
               SizedBox(
                 height: 10.h,
@@ -77,19 +81,17 @@ class _MyHomePageState extends State<SigningAccount> {
                 ),
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MyConcludingScreen()));
+                            builder: (context) => const MyConcludingScreen()), (route) => false,);
                   },
                   child: Center(
                     child: Ink(
                       height: 57.h,
                       width: 327.w,
-                      padding: const EdgeInsets.only(
-                        left: 135,
-                      ),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Log in',
@@ -118,16 +120,13 @@ class _MyHomePageState extends State<SigningAccount> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Forgot password',
+                  Text('Forgot password ',
                       style: GoogleFonts.nunito(
                         textStyle: const TextStyle(
                             color: Color(0xff656F77),
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
                       )),
-                  SizedBox(
-                    width: 10.w,
-                  ),
                   Text('Get new',
                       style: GoogleFonts.nunito(
                           textStyle: const TextStyle(
@@ -135,27 +134,27 @@ class _MyHomePageState extends State<SigningAccount> {
                               fontWeight: FontWeight.w800)))
                 ],
               ),
-              SizedBox(
-                height: 8.h,
-              ),
+              SizedBox(height: 8.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Do you have an account?',
-                      style: GoogleFonts.nunito(
-                        textStyle: const TextStyle(
-                            color: Color(0xff656F77),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400),
-                      )),
-                  SizedBox(
-                    width: 8.w,
+                  Text(
+                    'Do you have an account? ',
+                    style: GoogleFonts.nunito(
+                      textStyle: const TextStyle(
+                          color: Color(0xff656F77),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400),
+                    ),
                   ),
-                  Text('Create new',
-                      style: GoogleFonts.nunito(
-                          textStyle: const TextStyle(
-                              color: Color(0xff191D21),
-                              fontWeight: FontWeight.w800))),
+                  Text(
+                    'Create new',
+                    style: GoogleFonts.nunito(
+                      textStyle: const TextStyle(
+                          color: Color(0xff191D21),
+                          fontWeight: FontWeight.w800),
+                    ),
+                  ),
                 ],
               )
             ],

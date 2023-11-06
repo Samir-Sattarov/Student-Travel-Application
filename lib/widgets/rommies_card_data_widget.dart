@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../entity/rommies_card_entity.dart';
+import '../entity/rommies_entity.dart';
 
 class RommiesCardDataWidget extends StatelessWidget {
   final RommmiesCardEntity entity;

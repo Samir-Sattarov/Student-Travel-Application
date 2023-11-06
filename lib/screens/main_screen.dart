@@ -20,7 +20,6 @@ class _MainScreenState extends State<MainScreen> {
     const DiscoveryScreenThree()
   ];
   int currentScreen = 0;
-  bool isSelect = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,33 +38,36 @@ class _MainScreenState extends State<MainScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              BottomBarWidget(
-                  isActive: currentScreen == 0 ? true : false,
-                  onTap: () {
-                    setState(() {
-                      currentScreen = 0;
-                    });
-                  },
-                  icon: Icons.location_on,
-                  title: "Trips"),
-              BottomBarWidget(
-                  isActive: currentScreen == 1 ? true : false,
-                  onTap: () {
-                    setState(() {
-                      currentScreen = 1;
-                    });
-                  },
-                  icon: Icons.favorite,
-                  title: "Profile"),
-              BottomBarWidget(
-                  isActive: currentScreen == 2 ? true : false,
-                  onTap: () {
-                    setState(() {
-                      currentScreen = 2;
-                    });
-                  },
-                  icon: Icons.settings,
-                  title: "Settings"),
+              BottomNavigationBarItemWidget(
+                isActive: currentScreen == 0 ? true : false,
+                onTap: () {
+                  setState(() {
+                    currentScreen = 0;
+                  });
+                },
+                icon: Icons.location_on,
+                title: "Trips",
+              ),
+              BottomNavigationBarItemWidget(
+                isActive: currentScreen == 1 ? true : false,
+                onTap: () {
+                  setState(() {
+                    currentScreen = 1;
+                  });
+                },
+                icon: Icons.favorite,
+                title: "Profile",
+              ),
+              BottomNavigationBarItemWidget(
+                isActive: currentScreen == 2 ? true : false,
+                onTap: () {
+                  setState(() {
+                    currentScreen = 2;
+                  });
+                },
+                icon: Icons.settings,
+                title: "Settings",
+              ),
             ],
           ),
         ),

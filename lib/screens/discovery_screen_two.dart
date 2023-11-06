@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../core/utils/assets.dart';
-import '../entity/home_preference_entity.dart';
+import '../entity/category_entity.dart';
 import '../entity/users_rommie_card_entity.dart';
 import '../widgets/home_preference_widget.dart';
 import '../widgets/rommie_card_widget.dart';
@@ -18,52 +18,52 @@ class DiscoveryScreenTwoScreen extends StatefulWidget {
 class _DiscoveryScreenTwoScreenState extends State<DiscoveryScreenTwoScreen> {
   @override
   Widget build(BuildContext context) {
-    List<RommieCardEntity> listEntityRommie = [
-      RommieCardEntity(
+    List<UsersRommieCardEntity> listEntityRommie = [
+      UsersRommieCardEntity(
         avatar: Assets.tAvatarLouSmith,
         name: 'Lou Smith',
         text:
         'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.',
         data: '2 weeks',
-        color: const Color(0xffFFF2AE)
+        color: const Color(0xffCFFFF6)
       ),
-      RommieCardEntity(
+      UsersRommieCardEntity(
         avatar: Assets.tAvatarLouSmith,
         name: 'Lou Smith',
         text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.',
         data: '2 weeks',
         color: const Color(0xffFFF2AE),
       ),
-      RommieCardEntity(
+      UsersRommieCardEntity(
         avatar: Assets.tAvatarLouSmith,
         name: 'Lou Smith',
         text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.',
         data: '2 weeks', color: const Color(0xffCFFFF6),
       ),
-      RommieCardEntity(
+      UsersRommieCardEntity(
         avatar: Assets.tAvatarLouSmith,
         name: 'Lou Smith',
         text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.',
         data: '2 weeks', color: const Color(0xffCBE3FF),
       ),
     ];
-    List<HomePreferenceEntity> listEntityPreference = [
-      HomePreferenceEntity(
+    List<CategoryEntity> listEntityPreference = [
+      CategoryEntity(
           image: Assets.tMountainIcon,
           place: 'Mountains',
           color: const Color(0xffFFE3D2,)
       ),
-      HomePreferenceEntity(
+      CategoryEntity(
           image: Assets.tMuseumIcon,
           place: 'City',
           color: const Color(0xffFFF2AE,)
       ),
-      HomePreferenceEntity(
+      CategoryEntity(
           image: Assets.tMountainIcon,
           place: 'Museum',
           color: const Color(0xffCFFFF6,)
       ),
-      HomePreferenceEntity(
+      CategoryEntity(
           image: Assets.tMuseumIcon,
           place: 'Mountains',
           color: const Color(0xffFFE3D2,)

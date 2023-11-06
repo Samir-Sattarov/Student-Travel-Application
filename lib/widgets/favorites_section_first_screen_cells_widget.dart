@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:student_travel_application/entity/favorites_section_first_screen_cells_entity.dart';
+import 'package:student_travel_application/entity/favorites_section_cells_entity.dart';
 
 class FavoritesSectionFirstScreenCellsWidget extends StatelessWidget {
   final FavoritesSectionFirstScreenCellsEntity entity;
